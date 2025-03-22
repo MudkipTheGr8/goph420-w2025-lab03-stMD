@@ -48,8 +48,7 @@ def find_zero_crossings(x_values, y_values):
     zero_crossings = []
     for i in range(1, len(y_values)):
         if y_values[i-1] * y_values[i] <= 0 and np.isfinite(y_values[i-1]) and np.isfinite(y_values[i]):
-            # Linear interpolation to find the zero crossing
-            if y_values[i] - y_values[i-1] != 0:  # Avoid division by zero
+            if y_values[i] - y_values[i-1] != 0:
                 x_zero = x_values[i-1] + (x_values[i] - x_values[i-1]) * (-y_values[i-1]) / (y_values[i] - y_values[i-1])
                 zero_crossings.append(x_zero)
     return zero_crossings
