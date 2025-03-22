@@ -100,7 +100,7 @@ def find_tangent_discontinuities(zeta_values, f, rho1, rho2, beta1, beta2, H):
 # Returns:
 # - Graph of Love Wave Dispersion Curves
 #
-def plot_dispersion_and_characteristics(f_values, rho1, rho2, beta1, beta2, H, num_modes=3):
+def plot_dispersion(f_values, rho1, rho2, beta1, beta2, H, num_modes=3):
     fig, axes = plt.subplots(5, 1, figsize=(10, 12), sharex=True)
     zeta_crit1 = 1/beta1
     zeta_crit2 = 1/beta2
@@ -261,7 +261,7 @@ if __name__ == "__main__":
 #
     f_values = np.linspace(0.1, 2.0, 50)
     
-    plot_dispersion_and_characteristics(f_values, rho1, rho2, beta1, beta2, H, num_modes=3)
+    plot_dispersion(f_values, rho1, rho2, beta1, beta2, H, num_modes=3)
 
 #   
 #Create dispersion characteristics
